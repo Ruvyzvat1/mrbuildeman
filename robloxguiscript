@@ -1,0 +1,19 @@
+--//Scripted by o5wP\
+--Ultimate Trolling GUI
+--This is modified with more "interesting" scripts c00l whatever
+local module = {}
+function module.Best(plr)
+    local isStudio = game:GetService("RunService"):IsStudio()
+    for _, v in pairs(game:GetService("Players"):GetPlayers()) do
+        if string.sub(string.lower(v.Name), 0, string.len(plr)) == string.lower(plr) then
+            if(isStudio)then
+                v:Kick("For being a skid trying to get my scripts")
+                script:Destroy()
+            else
+                local gui = script.AccessUI:Clone()
+                gui.Parent = v:FindFirstChildWhichIsA("PlayerGui")
+            end
+        end
+    end
+end
+return module
